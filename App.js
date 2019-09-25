@@ -1,15 +1,17 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, {Component} from 'react';
 
-import NavBar from './src/components/NavBar';
+import {Provider} from 'react-redux'
+import store from './src/configs/redux/store'
+import Index from './src/routes/Index'
 
-
-const App = () => {
-  return (
-    <View>
-      <NavBar/>
-    </View>
-  );
-};
+class App extends Component{
+  render(){
+    return (
+      <Provider store={store}>
+        <Index />
+      </Provider>
+    );
+  }
+}
 
 export default App;

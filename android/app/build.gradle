@@ -81,7 +81,6 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
-
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 /**
@@ -188,10 +187,32 @@ android {
         pickFirst '**/armeabi-v7a/libjsc.so'
     }
 }
+preBuild.doFirst {
+    ant.replaceregexp(match: 'android.support.annotation.NonNull;', replace: 'androidx.annotation.NonNull;', flags: 'g', byline: true)
+            {
+                fileset(dir: '../../node_modules/react-native-reanimated/android/src/main/java/com/swmansion/reanimated/transitions/', includes: '*.java')
+            }
+    ant.replaceregexp(match: 'android.support.annotation.Nullable;', replace: 'androidx.annotation.Nullable;', flags: 'g', byline: true)
+            {
+                fileset(dir: '../../node_modules/react-native-reanimated/android/src/main/java/com/swmansion/reanimated/transitions/', includes: '*.java')
+            }
+    ant.replaceregexp(match: 'android.support.transition', replace: 'androidx.transition', flags: 'g', byline: true)
+            {
+                fileset(dir: '../../node_modules/react-native-reanimated/android/src/main/java/com/swmansion/reanimated/transitions/', includes: '*.java')
+            }
+}
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
+    implementation('androidx.annotation:annotation:1.0.0-rc02') {
+        force = true
+    }
+    implementation('androidx.legacy:legacy-support-core-utils:1.0.0-rc02') {
+        force = true
+    }
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";
