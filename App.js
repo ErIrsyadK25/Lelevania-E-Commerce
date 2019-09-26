@@ -1,8 +1,16 @@
 import React, {Component} from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
 
 import {Provider} from 'react-redux'
-import store from './src/configs/redux/store'
-import Index from './src/routes/Index'
+import store from './source/publics/redux/store'
+import Index from './source/screens/Index'
 
 class App extends Component{
   render(){

@@ -30,7 +30,8 @@
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^6.1.1",
     "rn-round-checkbox": "^0.3.4",
-    "rn-viewpager": "^1.2.9"
+    "rn-viewpager": "^1.2.9",
+    "switch-button-react-native": "^1.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
