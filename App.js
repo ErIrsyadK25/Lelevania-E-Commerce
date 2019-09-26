@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { View } from 'react-native';
-
-import NavBar from './src/components/NavBar';
-
-
-const App = () => {
-  return (
-    <View>
-      <NavBar/>
-    </View>
-  );
-};
-=======
 import React, {Component} from 'react';
 
 import {Provider} from 'react-redux'
@@ -28,6 +13,5 @@ class App extends Component{
     );
   }
 }
->>>>>>> master
 
 export default App;

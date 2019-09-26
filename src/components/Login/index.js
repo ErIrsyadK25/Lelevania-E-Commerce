@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import {View,Text, TextInput, TouchableOpacity, ScrollView, AsyncStorage} from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import NavBar from '../NavBar'
+import HomeScreen from '../HomeScreen'
 import { connect } from 'react-redux'
-import { login,autoLogin } from '../../configs/redux/actions/user'
+import { login, autoLogin } from '../../configs/redux/actions/user'
 
 class Login extends Component {
     constructor(props){
