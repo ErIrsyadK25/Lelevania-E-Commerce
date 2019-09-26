@@ -107,8 +107,8 @@ class LoginScreen extends Component{
                         <View style={{ width:'100%', alignItems:'center', justifyContent:'center'}}>
                             {this.props.errorMessage && <Text style={{marginTop:20, color:'red'}}>Email atau Password tidak ditemukan.</Text>}
                             
-                            <TextInput style={{width:'90%', height:60, marginTop:40}} underlineColorAndroid="#a7a9ab" placeholder="Email" onChangeText ={this.props.setEmail}/>
-                            <TextInput style={{width:'90%', height:60}} underlineColorAndroid="#a7a9ab" placeholder="Password" onChangeText={this.props.setPassword} secureTextEntry={true}/>
+                            <TextInput style={{width:'90%', height:60, marginTop:40}} underlineColorAndroid="#a7a9ab" placeholder="Email" onChangeText ={this.props.setEmail} isRequired={true}/>
+                            <TextInput style={{width:'90%', height:60}} underlineColorAndroid="#a7a9ab" placeholder="Password" onChangeText={this.props.setPassword} isRequired={true} secureTextEntry={true}/>
 
                             <TouchableOpacity style={{marginTop:20,width:'90%', alignItems:'center', justifyContent: 'center', padding:10, borderRadius:3, backgroundColor:'orange'}} onPress={this.props.loginEvent}>
                                 <Text style={{color:'white', fontSize:20}}>Login</Text>

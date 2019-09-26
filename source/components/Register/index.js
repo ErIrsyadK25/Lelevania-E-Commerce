@@ -172,9 +172,9 @@ class Register extends Component{
                                     </View>
                                     <View style={{flex:1, marginTop:15, width:'100%', alignItems:'center', justifyContent:'center'}}>
                                         <View style={{flex:1, flexDirection:'row', alignItems:'center', justifyContent:'center', width:'90%'}}>
-                                            <TextInput style={{flex:1, width:'100%'}} placeholder="08XX" onChangeText={(text)=>this.setState({preNumber:text})}/>
+                                            <TextInput style={{flex:1, width:'100%'}} placeholder="08XX" onChangeText={(text)=>this.setState({preNumber:text})} keyboardType={'numeric'} autoComplete={'off'} />
                                             <Text style={{flex:1, textAlign:'center'}}>-</Text>
-                                            <TextInput style={{flex:5, width:'100%'}} placeholder="Nomor Ponsel" onChangeText={(text)=>this.setState({number:text})}/>
+                                            <TextInput style={{flex:5, width:'100%'}} placeholder="Nomor Ponsel" onChangeText={(text)=>this.setState({number:text})} keyboardType={'numeric'} autoComplete={'off'} />
                                         </View>
                                         <View style={{width:'88%', height:1, backgroundColor:'#a7a9ab'}} />
                                     </View>
