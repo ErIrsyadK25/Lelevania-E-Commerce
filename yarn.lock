@@ -3201,7 +3201,7 @@ inquirer@^6.4.1:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-invariant@^2.2.4:
+invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -5486,6 +5486,13 @@ react-native-numeric-input@^1.8.3:
   dependencies:
     prop-types "^15.6.1"
     react-native-pixel-perfect "^1.0.1"
+
+react-native-onesignal@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-3.4.1.tgz#89ee772a57de086faf7765c3189caed998ca2a34"
+  integrity sha512-wExdnwNx5d6haKvi5SAFQHDFY0e/+VjmGfPqjoq4msmdnNxUH5i5efXgw09NqWH4rJMwLXL25YIZ6TFaBHQIjw==
+  dependencies:
+    invariant "^2.2.2"
 
 react-native-pixel-perfect@^1.0.1:
   version "1.0.2"
