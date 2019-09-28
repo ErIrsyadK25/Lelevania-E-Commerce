@@ -3,7 +3,7 @@ import {View,Text, TextInput, TouchableOpacity, ScrollView, AsyncStorage} from '
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import HomeScreen from '../HomeScreen'
 import { connect } from 'react-redux'
-import { login,autoLogin, profile } from '../../publics/redux/actions/user'
+import { login, autoLogin, profile } from '../../publics/redux/actions/user'
 
 class Login extends Component {
     constructor(props){

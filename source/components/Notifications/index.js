@@ -50,7 +50,7 @@ class Notifications extends Component{
                     console.warn('data null')
                 }
             }).catch(()=>{
-                console.warn('wkwkwk')
+                console.log('error')
             })
         })
     }
@@ -110,7 +110,7 @@ class History extends Component{
                     </View>
                     <View style={{flex:1}}>
                         <Text style={{color:'orange', fontWeight:'bold', fontSize:17}}>Order ID : 3AJB240</Text>
-                        <Text>Pesanan 'Kuaci' anda sudah sampai.</Text>
+                        <Text>Pesanan 'Barang' anda sudah sampai.</Text>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity style={{flex:1, backgroundColor:'white', marginBottom:10, borderRadius:10, padding:10, width:'100%'}}>
@@ -119,7 +119,7 @@ class History extends Component{
                     </View>
                     <View style={{flex:1}}>
                         <Text style={{color:'orange', fontWeight:'bold', fontSize:17}}>Order ID : 3AJB240</Text>
-                        <Text>Pesanan 'Kuaci' anda sudah sampai.</Text>
+                        <Text>Pesanan 'Barang' anda sudah sampai.</Text>
                     </View>
                 </TouchableOpacity>
             </ScrollView>

@@ -1,2 +1,2 @@
-const URL = 'http://192.168.0.125:3000'
+const URL = 'https://restful-lelevenia.herokuapp.com'
 export default URL
