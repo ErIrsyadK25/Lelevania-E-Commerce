@@ -45,7 +45,7 @@ class BackgroundCarousel extends React.Component{
                 {this.state.selectedIndex == this.props.images.length-1 &&
                 <TouchableOpacity 
                     onPress={()=>this.props.navigation.goBack()} 
-                    style={styles.gettingStarted}
+                    style={{position:'absolute', padding:10, bottom:'10%', marginLeft:'30%', marginRight:'30%', backgroundColor:'#FFA500', alignItems:'center', justifyContent:'center'}}
                 >
                     <Text style={{color:'white', fontWeight:'bold'}}>GETTING STARTED</Text>
                 </TouchableOpacity>
@@ -84,7 +84,6 @@ const styles = StyleSheet.create({
         height:15,
         borderRadius:15,
         margin:5,
-        marginTop: 40,
         backgroundColor:'orange'
     },
     gettingStarted:{
@@ -107,12 +106,27 @@ const images = [
     ];
 
 class SplashScreen extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            splashScreen: true
+        }
+    }
     static navigationOptions = {
         header:null
     }
+    componentDidMount(){
+        setTimeout(()=>{
+            this.setState({splashScreen:false})
+        },1000)
+    }
     render(){
+        const {width,height} = Dimensions.get('window')
         return(
             <View>
+                {this.state.splashScreen &&
+                <Image style={{width:width, height:height, position:'relative'}} source={{uri:'https://res.cloudinary.com/arkademy/image/upload/v1569502062/samples/splash2_cl5t85.png'}}/>
+                }
                 <BackgroundCarousel images={images} navigation={this.props.navigation}/>
             </View>
         )

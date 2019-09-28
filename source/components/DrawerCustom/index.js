@@ -76,7 +76,7 @@ class DrawerCustom extends Component{
                     </TouchableOpacity>
                     <TouchableOpacity style={{flex:1,padding:15, alignItems:'center', justifyContent:'center', borderWidth:0.5, borderColor:'#AAAAAA', height:80}} onPress={()=>this.props.navigation.navigate('Profile')}>
                         <FontAwesome style={{ fontSize:35, color:'white'}} name="user" />
-                        <Text style={{fontSize:12, color:'white'}}>My elevenia</Text>
+                        <Text style={{fontSize:12, color:'white'}}>My Lelevenia</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{flex:1,padding:15, alignItems:'center', justifyContent:'center', borderWidth:0.5, borderColor:'#AAAAAA', height:80}} onPress={()=>this.props.navigation.navigate('Notifications')}>
                         <FontAwesome style={{ fontSize:35, color:'white'}} name="bell" />
