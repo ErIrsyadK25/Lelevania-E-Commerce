@@ -51,7 +51,7 @@ class Home extends Component{
                 },
                 {
                     key:1,
-                    feature:'Paket Data'
+                    feature:'Data'
                 },
                 {
                     key:2,

@@ -42,11 +42,11 @@ class Login extends Component {
         this.props.dispatch(login(dataLogin)).then(()=>{
             this.setState({login:true})
             console.log('ini adalah user token :', this.props.user.token)
-            console.log('ini adalah user :', this.props.user.user[0])
+            console.log('ini adalah user :', this.props.user.user[0]._id)
             let {user} = this.props
             let dataStorage = {
                 token: user.token,
-                data: user.user[0]
+                data: user.user[0]._id
             }
             this.setAsyncStorageItem(dataStorage)
             

@@ -38,16 +38,15 @@ class Notifications extends Component{
         AsyncStorage.getItem('user').then((value)=>{
             console.log(value)
             axios.get(`${URL}/transactions/${value}`).then((response)=>{
-                console.warn('berhasil')
-                if(response.data.data.products[0] != null){
-                    console.warn('data tidak null', response.data.data.products[0])
+                if(response.data.data.products != null){
+                    console.log('data tidak null', response.data.data.products)
                     this.setState({
                         notificationsItems:response.data.data,
                         productItem:response.data.data.products
                     })
                 }
                 else{
-                    console.warn('data null')
+                    console.log('data null')
                 }
             }).catch(()=>{
                 console.log('error')

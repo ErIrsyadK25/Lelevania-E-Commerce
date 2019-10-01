@@ -114,7 +114,7 @@ class Register extends Component{
             <View style={{flex:1, backgroundColor:'#e8eaed'}}>
                 <View style={{flex:1, flexDirection:'row', alignItems:'center', justifyContent: 'center'}}>
                     <TouchableOpacity onPress={()=>this.props.navigation.goBack()} style={{flex:1, alignItems:'center', justifyContent:'center'}}>
-                        <FontAwesome style={{fontSize:25, fontWeight:'bold', color:'orange'}} name="arrow-left"/>
+                        <FontAwesome style={{fontSize:20, color:'orange', paddingRight: 50 }} name="arrow-left"/>
                     </TouchableOpacity>
                     <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
                         <Text style={{fontSize:25, color:'orange', fontWeight:'bold'}}>Daftar</Text>
@@ -172,7 +172,7 @@ class Register extends Component{
                                     </View>
                                     <View style={{flex:1, marginTop:15, width:'100%', alignItems:'center', justifyContent:'center'}}>
                                         <View style={{flex:1, flexDirection:'row', alignItems:'center', justifyContent:'center', width:'90%'}}>
-                                            <TextInput style={{flex:1, width:'100%'}} placeholder="08XX" onChangeText={(text)=>this.setState({preNumber:text})} keyboardType={'numeric'} autoComplete={'off'} />
+                                            <TextInput style={{flex:1, width:'100%'}} placeholder="08XX" maxLength={4} onChangeText={(text)=>this.setState({preNumber:text})} keyboardType={'numeric'} autoComplete={'off'} />
                                             <Text style={{flex:1, textAlign:'center'}}>-</Text>
                                             <TextInput style={{flex:5, width:'100%'}} placeholder="Nomor Ponsel" onChangeText={(text)=>this.setState({number:text})} keyboardType={'numeric'} autoComplete={'off'} />
                                         </View>

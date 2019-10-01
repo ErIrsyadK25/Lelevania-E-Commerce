@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {View, FlatList, Image, List, TextInput, TouchableOpacity, ScrollView} from 'react-native'
 import { Tab, Header, Input, Left, Right, Title, Footer, TabHeading, Tabs, CardItem, Layout, Body, Text, Button, Container, Picker, Content, Form, Item, Icon, Label, ListItem} from 'native-base';
 import SwitchToggle from 'react-native-switch-toggle';
+import ImagePicker from 'react-native-image-picker';
 
 class ChangeBio extends Component{
     
@@ -37,9 +38,9 @@ class ChangeBio extends Component{
             <Item stackedLabel>
                 <Label>Nomor Ponsel</Label>
                 <View style={{flexDirection:'row'}}>
-                <TextInput style={{flex:1, width:'100%'}} placeholder="08XX"/>
+                <TextInput style={{flex:1, width:'100%'}} keyboardType={'numeric'} maxLength={4} placeholder="08XX" value={'0815'}/>
                 <Text style={{flex:1, textAlign:'center', marginTop:'3%'}}>-</Text>
-                <TextInput style={{flex:5, width:'100%'}} placeholder="Nomor Ponsel"/>
+                <TextInput style={{flex:5, width:'100%'}} keyboardType={'numeric'} placeholder="Nomor Ponsel" value={'2320377456'}/>
                 </View>
             </Item>
             <Item floatingLabel>

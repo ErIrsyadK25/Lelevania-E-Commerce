@@ -10,7 +10,7 @@ import URL from '../../publics/redux/actions/URL'
 
 class Profile extends Component{
     static navigationOptions = ({ navigation }) => ({
-        headerTitle: 'My Elevania',
+        headerTitle: 'My Lelevania',
         headerTitleStyle: { 
             width: '100%',
             textAlign: 'left',

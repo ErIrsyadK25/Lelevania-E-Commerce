@@ -90,7 +90,7 @@ class SellProduct extends Component{
     }
 
     navigateToData(){
-      this.props.navigation.navigate('DetailProduct', { productId: this.props.insertedProduct.product._id })
+      this.props.navigation.navigate('Home')
     }
 
     render(){
@@ -111,7 +111,7 @@ class SellProduct extends Component{
               style={{borderWidth:2, borderColor:'#ff8040',width: '90%', backgroundColor: 'white', alignSelf:'center', justifyContent:'center'}}
               onPress={this.chooseFile.bind(this)}>
             <Text style={{color:'#ff8040'}}>Pilih Gambar Produk</Text>
-          </Button>
+             </Button>
             
             <Item >
               <Label>Nama Produk :</Label>
@@ -125,6 +125,7 @@ class SellProduct extends Component{
               <Label>Harga :</Label>
               <Input 
                 value={this.state.product_price}
+                keyboardType={'numeric'}
                 onChangeText={(value) => this.setState({product_price: value})}
               />
             </Item>

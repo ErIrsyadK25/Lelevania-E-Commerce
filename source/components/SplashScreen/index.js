@@ -45,9 +45,27 @@ class BackgroundCarousel extends React.Component{
                 {this.state.selectedIndex == this.props.images.length-1 &&
                 <TouchableOpacity 
                     onPress={()=>this.props.navigation.goBack()} 
-                    style={{position:'absolute', padding:10, bottom:'10%', marginLeft:'30%', marginRight:'30%', backgroundColor:'#FFA500', alignItems:'center', justifyContent:'center'}}
+                    style={{position:'absolute', padding:15, bottom:'17%', marginLeft:'10%', marginRight: '10%', width: '80%', height: 40, backgroundColor:'#ff7e00', alignItems:'center', justifyContent:'center'}}
                 >
-                    <Text style={{color:'white', fontWeight:'bold'}}>GETTING STARTED</Text>
+                    <Text style={{color:'white', fontSize: 20}}>Belanja Sekarang</Text>
+                </TouchableOpacity>
+                }
+
+                {this.state.selectedIndex == this.props.images.length-1 &&
+                <TouchableOpacity 
+                    onPress={()=>this.props.navigation.navigate('Login')} 
+                    style={{flexDirection: 'row', position:'absolute', bottom:'10%', marginLeft:'10%', marginRight: '10%', width: '30%', height: 35, borderWidth: 1, borderColor: '#ff7e00', alignItems:'center', justifyContent:'center'}}
+                >
+                    <Text style={{color:'#ff7e00', fontSize: 20}}>LOGIN</Text>
+                </TouchableOpacity>
+                }
+
+                {this.state.selectedIndex == this.props.images.length-1 &&
+                <TouchableOpacity 
+                    onPress={()=>this.props.navigation.navigate('Register')} 
+                    style={{flexDirection: 'row', position:'absolute', bottom:'10%', marginLeft:'52%', marginRight: 15, width: '32%', height: 35, borderWidth: 1, borderColor: '#ff7e00', alignItems:'center', justifyContent:'center'}}
+                >
+                    <Text style={{color:'#ff7e00', fontSize: 20}}>DAFTAR</Text>
                 </TouchableOpacity>
                 }
 
@@ -71,7 +89,7 @@ const styles = StyleSheet.create({
     },
     circleDiv:{
         position:'absolute',
-        bottom:35,
+        bottom:20,
         height:10,
         width:'100%',
         display:'flex',
